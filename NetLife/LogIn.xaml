@@ -1,0 +1,64 @@
+﻿<Window x:Class="NetLife.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetLife"
+        mc:Ignorable="d"
+        Title="LogIn" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        Background="Aqua" MaxHeight="450" MaxWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock Height="25" VerticalAlignment="Center" Foreground="Gray"
+                       Text="NetLife" Background="White" TextAlignment="Center"
+                       FontSize="20" FontFamily="Copperplate Gothic Light" Margin="15 0"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="UserName" VerticalAlignment="Center" Grid.Column="0"
+                   FontSize="20" FontFamily="Copperplate Gothic Light"
+                   Width="120" Height="40"/>
+            <TextBox Grid.Column="1" VerticalAlignment="Center" x:Name="tbUserName"
+                     FontSize="20" Foreground="Black" FontFamily="Copperplate Gothic Light"
+                     Height="40" Background="White" Margin="10"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Password" VerticalAlignment="Center" Grid.Column="0"
+                   FontSize="20" FontFamily="Copperplate Gothic Light"
+                   Width="120" Height="40"/>
+            <PasswordBox Grid.Column="1" VerticalAlignment="Center" x:Name="pbPassword"
+                         FontSize="20" Foreground="Black" FontFamily="Copperplate Gothic Light"
+                         Height="40" Background="White" Margin="10"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnEntrance" Margin="60 5" Background="White" Grid.Column="0" Click="btnEntranceClick"
+                    Foreground="Black" Content="LogIn" FontSize="20" FontFamily="Copperplate Gothic Light"/>
+            <Button x:Name="btnCreate" Margin="60 5" Background="White" Grid.Column="1" Click="btnCreateAccountClick"
+                    Foreground="Black" Content="Create Account" FontSize="20" FontFamily="Copperplate Gothic Light"/>
+        </Grid>
+
+    </Grid>
+</Window>
