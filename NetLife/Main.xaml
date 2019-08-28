@@ -60,37 +60,37 @@
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
-            <ListView x:Name="lvMenu" Margin="0 130" Foreground="LightGray" Background="#FF222222">
-                <ListViewItem Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light">
+            <ListView x:Name="lvMenu" Margin="0 100" Foreground="LightGray" Background="#FF222222">
+                <Button Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light" Background="#FF222222" Width="180">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="FaceProfile" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Profile" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
-                </ListViewItem>
-                <ListViewItem Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light">
+                </Button>
+                <Button Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light" Background="#FF222222" Width="180">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="People" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Friends" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
-                </ListViewItem>
-                <ListViewItem Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light">
+                </Button>
+                <Button Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light" Background="#FF222222" Width="180">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Group" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Groups" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
-                </ListViewItem>
-                <ListViewItem Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light">
+                </Button>
+                <Button Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light" Background="#FF222222" Width="180">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="NewBox" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="News" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
-                </ListViewItem>
-                <ListViewItem Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light">
+                </Button>
+                <Button Height="55" Foreground="LightGray" FontFamily="Copperplate Gothic Light" Background="#FF222222" Width="180">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Menu" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Menu" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
-                </ListViewItem>
+                </Button>
             </ListView>
         </Grid>
     </Grid>
