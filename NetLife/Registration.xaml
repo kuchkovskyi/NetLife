@@ -108,9 +108,9 @@
             <Label Content="Password" VerticalAlignment="Center" Grid.Column="0"
                    FontSize="20" FontFamily="Copperplate Gothic Light"
                    Width="120" Height="40"/>
-            <TextBox Grid.Column="1" VerticalAlignment="Center" x:Name="pbPassword"
-                     FontSize="20" Foreground="Black" FontFamily="Copperplate Gothic Light"
-                     Height="40" Background="White" Margin="10"/>
+            <PasswordBox Grid.Column="1" VerticalAlignment="Center" x:Name="pbPassword"
+                         FontSize="20" Foreground="Black" FontFamily="Copperplate Gothic Light"
+                         Height="40" Background="White" Margin="10"/>
         </Grid>
 
         <Grid Grid.Row="7">

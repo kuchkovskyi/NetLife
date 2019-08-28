@@ -19,6 +19,7 @@ namespace NetLife
     /// </summary>
     public partial class Registration : Window
     {
+        bool check = false;
         public Registration()
         {
             InitializeComponent();
@@ -26,10 +27,31 @@ namespace NetLife
 
         private void btnCreateAccountClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Your profile was created successfully");
-            LogIn log = new LogIn();
-            log.Show();
-            this.Close();
+            if (check == false)
+            {
+                CheckDataOfReg();
+            }
+            else
+            {
+                MessageBox.Show("Your profile was created successfully");
+                LogIn log = new LogIn();
+                log.Show();
+                this.Close();
+            }
+        }
+
+        public void CheckDataOfReg()
+        {
+            if (tbName.Text == "" || tbSurname.Text == "" || tbAge.Text == "" ||
+                rbMale.IsChecked == false && rbFemale.IsChecked == false ||
+                tbUserName.Text == "" || pbPassword.Password == "")
+            {
+                MessageBox.Show("Please fill in the empty fields!");
+            }
+            else
+            {
+                check = true;
+            }
         }
 
         private void btnBackClick(object sender, RoutedEventArgs e)

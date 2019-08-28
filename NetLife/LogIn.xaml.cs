@@ -27,9 +27,25 @@ namespace NetLife
 
         private void btnEntranceClick(object sender, RoutedEventArgs e)
         {
-            Main main = new Main();
-            main.Show();
-            this.Close();
+            if (check == false)
+            {
+                CheckDataOfLogIn();
+            }
+            else
+            {
+                Main main = new Main();
+                main.Show();
+                this.Close();
+            }
+        }
+
+        public void CheckDataOfLogIn()
+        {
+            if(tbUserName.Text == "" || pbPassword.Password == "")
+            {
+                MessageBox.Show("Please fill in the empty fields!");
+            }
+            else { check = true; }
         }
 
         private void btnCreateAccountClick(object sender, RoutedEventArgs e)
