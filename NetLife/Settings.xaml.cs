@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace NetLife
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для Settings.xaml
     /// </summary>
-    public partial class Main : Window
+    public partial class Settings : Window
     {
-        public Main()
+        public Settings()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace NetLife
             news.Show();
             this.Close();
         }
-        private void btnSettingsClick (object sender, RoutedEventArgs e)
+        private void btnSettingsClick(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();

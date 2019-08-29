@@ -15,15 +15,14 @@ using System.Windows.Shapes;
 namespace NetLife
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для Profile.xaml
     /// </summary>
-    public partial class Main : Window
+    public partial class Profile : Window
     {
-        public Main()
+        public Profile()
         {
             InitializeComponent();
         }
-
         private void btnProfileClick(object sender, RoutedEventArgs e)
         {
             Profile profile = new Profile();
@@ -37,7 +36,7 @@ namespace NetLife
             news.Show();
             this.Close();
         }
-        private void btnSettingsClick (object sender, RoutedEventArgs e)
+        private void btnSettingsClick(object sender, RoutedEventArgs e)
         {
             Settings settings = new Settings();
             settings.Show();

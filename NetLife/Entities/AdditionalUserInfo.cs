@@ -21,7 +21,5 @@ namespace NetLife.Entities
         public int WorkExperience { get; set; }
 
         public virtual User UserData { get; set; }
-
-        //public Image Img { get; set; }
     }
 }

@@ -1,12 +1,12 @@
-﻿<Window x:Class="NetLife.Main"
+﻿<Window x:Class="NetLife.Profile"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NetLife"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="NetLife" Height="600" Width="1024"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Profile" Height="600" Width="1024"
         WindowStartupLocation="CenterScreen">
     <Grid Background="#FFEEEEEE" MouseDown="MouseDown">
         <StackPanel VerticalAlignment="Top" Background="White">
@@ -36,27 +36,73 @@
         </StackPanel>
 
         <Grid Margin="250 55 0 0" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="45*"/>
-                <ColumnDefinition Width="338*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid x:Name="Principal" Grid.ColumnSpan="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Margin="15 10 15 5" Source="Images/news.jpg"/>
-                <TextBlock Grid.Column="0" Grid.Row="1" Margin="15 10 15 5" FontSize="20" Foreground="Gray" TextWrapping="Wrap"
-                           Text="Today a new project has started, which is rapidly gaining momentum. The young programmer created a new social network ``NetLife``, which was dedicated to programmers and designers. Already several hundred people have registered in this network. And you? "/>
 
-                <Image Grid.Column="1" Grid.Row="0" Margin="15 10 15 5" Source="Images/csharp.jpg"/>
-                <TextBlock Grid.Column="1" Grid.Row="1" Margin="15 10 15 5" FontSize="14" Foreground="Gray" TextWrapping="Wrap"
-                           Text="C # was developed as an application-level programming language for the CLR and, as such, depends primarily on the capabilities of the CLR itself. This applies primarily to the C # type system, which reflects BCL. So, with the development of the CLR from version 1.1 to 2.0, C # itself was significantly enriched; similar interaction should be expected in the future (however, this pattern was violated with the release of C # 3.0, which is an extension of the language that is not based on .NET platform extensions). The CLR provides C #, like all other .NET-oriented languages, many of the features that the ''classic'' programming languages ​​lack."/>
-            </Grid>
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10 10 10 40" Grid.ColumnSpan="2"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkName"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Name"
+                       TextAlignment="Left"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="1" Margin="10 10 10 40" Grid.ColumnSpan="2"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkSurname"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="1" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Surname"
+                       TextAlignment="Left"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="2" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Age"
+                       TextAlignment="Left"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="10 10 10 40"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkAge"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="3" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Gender"
+                       TextAlignment="Left"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Margin="10 10 10 40"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkGender" />
+
+            <TextBlock Grid.Column="0" Grid.Row="4" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="UserName"
+                       TextAlignment="left"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="10 10 10 40"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkUserName"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="5" Margin="10"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Experience"
+                       TextAlignment="Left"/>
+
+            <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="10 10 10 40"
+                       Background="LightGray" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="25"
+                       x:Name="tbkExperience"/>
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
@@ -81,8 +127,8 @@
                         Foreground="LightGray" FontFamily="Copperplate Gothic Light"
                         Background="#FF222222" Width="180" Click="btnSettingsClick">
                     <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Options" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
+                        <materialDesign:PackIcon Kind="Menu" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Menu" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
             </ListView>

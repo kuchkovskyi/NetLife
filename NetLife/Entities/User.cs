@@ -26,13 +26,11 @@ namespace NetLife.Entities
         [Required, StringLength(10)]
         public int Gender { get; set; }
 
-        [Required, StringLength(200)]
+        [Required, StringLength(19)]
         public string UserName { get; set; }
 
         public string Password { get; set; }
 
         public virtual AdditionalUserInfo userInfo { get; set; }
-
-        public virtual ICollection<Image> UsersPhoto { get; set; }
     }
 }
