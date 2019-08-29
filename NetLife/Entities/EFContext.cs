@@ -13,5 +13,8 @@ namespace NetLife.Entities
         {
 
         }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Image> UsersPhoto { get; set; }
     }
 }

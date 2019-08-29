@@ -67,7 +67,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\AdditionalUserInfo.cs" />
     <Compile Include="Entities\EFContext.cs" />
+    <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\New.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Main.xaml.cs">
