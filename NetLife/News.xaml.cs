@@ -58,6 +58,18 @@ namespace NetLife
             this.Close();
         }
 
+        private void btnAddNewClick(object sender, RoutedEventArgs e)
+        {
+            CreateNew createNew = new CreateNew();
+            createNew.Show();
+            this.Close();
+        }
+
+        private void btnDeleteNewClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

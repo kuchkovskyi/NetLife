@@ -11,11 +11,8 @@ namespace NetLife.Entities
     [Table("tblAditionalInfos")]
     public class AdditionalUserInfo
     {
-        [Key]
+        [Key, ForeignKey("UserData")]
         public int Id { get; set; }
-
-        [Required, ForeignKey("UserData")]
-        public int IdOfUser { get; set; }
 
         [Required]
         public int WorkExperience { get; set; }

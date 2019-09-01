@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetLife.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,18 +27,31 @@ namespace NetLife
         }
 
         private void btnCreateAccountClick(object sender, RoutedEventArgs e)
-        {
-            if (check == false)
-            {
-                CheckDataOfReg();
-            }
-            else
-            {
-                MessageBox.Show("Your profile was created successfully");
-                LogIn log = new LogIn();
-                log.Show();
-                this.Close();
-            }
+        { 
+                if (check == false)
+                {
+                    CheckDataOfReg();
+                }
+                else
+                {
+                    using (EFContext context = new EFContext())
+                    {
+                        context.Users.Add(new User
+                        {
+                            Name = tbName.Text,
+                            Surname = tbSurname.Text,
+                            Age = tbAge.Text,
+                            Gender = (rbMale.IsChecked.HasValue&&rbMale.IsChecked.Value)?"Male":"Female",
+                            UserName = tbUserName.Text,
+                            Password = pbPassword.Password
+                        });
+                    }
+
+                    MessageBox.Show("Your profile was created successfully!");
+                    LogIn log = new LogIn();
+                    log.Show();
+                    this.Close();
+                }
         }
 
         public void CheckDataOfReg()

@@ -77,10 +77,10 @@
             <Label Content="Gender" VerticalAlignment="Center" Grid.Column="0"
                    FontSize="20" FontFamily="Copperplate Gothic Light"
                    Width="120" Height="40"/>
-            <RadioButton Content="Male" HorizontalAlignment="Left" Grid.Column="1"
+            <RadioButton GroupName="Gender" Content="Male" HorizontalAlignment="Left" Grid.Column="1"
                    FontSize="20" FontFamily="Copperplate Gothic Light"
                    Width="120" Height="40" x:Name="rbMale"/>
-            <RadioButton Content="Female" HorizontalAlignment="Left" Grid.Column="2"
+            <RadioButton GroupName="Gender" Content="Female" HorizontalAlignment="Left" Grid.Column="2"
                    FontSize="20" FontFamily="Copperplate Gothic Light"
                    Width="120" Height="40" x:Name="rbFemale"/>
         </Grid>

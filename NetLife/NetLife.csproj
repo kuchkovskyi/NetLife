@@ -67,12 +67,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreateNew.xaml.cs">
+      <DependentUpon>CreateNew.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\AdditionalUserInfo.cs" />
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\New.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909012103163_migr1.cs" />
+    <Compile Include="Migrations\201909012103163_migr1.Designer.cs">
+      <DependentUpon>201909012103163_migr1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="News.xaml.cs">
@@ -87,6 +94,10 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Page Include="CreateNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -141,6 +152,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201909012103163_migr1.resx">
+      <DependentUpon>201909012103163_migr1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

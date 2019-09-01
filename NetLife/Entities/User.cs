@@ -19,12 +19,11 @@ namespace NetLife.Entities
 
         public string Surname { get; set; }
 
-        [Required]
-
-        public int Age { get; set; }
+        [Required, StringLength(2)]
+        public string Age { get; set; }
 
         [Required, StringLength(10)]
-        public int Gender { get; set; }
+        public string Gender { get; set; }
 
         [Required, StringLength(19)]
         public string UserName { get; set; }
