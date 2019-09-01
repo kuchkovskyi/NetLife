@@ -56,7 +56,7 @@
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
-            <ListView x:Name="lvMenu" Margin="0 150" Foreground="LightGray" Background="#FF222222">
+            <ListView x:Name="lvMenu" Margin="0 135" Foreground="LightGray" Background="#FF222222">
                 <Button x:Name="btnProfile" Height="55"
                         Foreground="LightGray" FontFamily="Copperplate Gothic Light"
                         Background="#FF222222" Width="180" Click="btnProfileClick">
@@ -70,7 +70,7 @@
                         Background="#FF222222" Width="180" Click="btnNewsClick">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="NewBox" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="News" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        <TextBlock Text="News     " FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnSettins" Height="55"
@@ -79,6 +79,14 @@
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Options" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnFAQ" Height="55"
+                        Foreground="LightGray" FontFamily="Copperplate Gothic Light"
+                        Background="#FF222222" Width="180" Click="btnFAQClick">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Faq" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="FAQ         " FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
             </ListView>

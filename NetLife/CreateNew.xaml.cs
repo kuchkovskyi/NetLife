@@ -63,7 +63,7 @@ namespace NetLife
                     });
                 }
 
-                MessageBox.Show("Your news added succesfull!");
+                MessageBox.Show("Your news created and added succesfull!");
                 News news = new News();
                 news.Show();
                 this.Close();

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace NetLife
 {
     /// <summary>
-    /// Логика взаимодействия для News.xaml
+    /// Логика взаимодействия для FAQ.xaml
     /// </summary>
-    public partial class News : Window
+    public partial class FAQ : Window
     {
-        public News()
+        public FAQ()
         {
             InitializeComponent();
         }
@@ -56,18 +56,6 @@ namespace NetLife
             main.Show();
             log.Show();
             this.Close();
-        }
-
-        private void btnAddNewClick(object sender, RoutedEventArgs e)
-        {
-            CreateNew createNew = new CreateNew();
-            createNew.Show();
-            this.Close();
-        }
-
-        private void btnDeleteNewClick(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnFAQClick(object sender, RoutedEventArgs e)

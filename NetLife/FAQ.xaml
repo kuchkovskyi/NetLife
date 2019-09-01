@@ -1,4 +1,4 @@
-﻿<Window x:Class="NetLife.Settings"
+﻿<Window x:Class="NetLife.FAQ"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:NetLife"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Settings" Height="600" Width="1024"
+        Title="FAQ" Height="600" Width="1024"
         WindowStartupLocation="CenterScreen">
-    <Grid Background="#FFEEEEEE" MouseDown="MouseDown">
+    <Grid>
         <StackPanel VerticalAlignment="Top" Background="White">
             <Grid Height="10" Background="Aqua"/>
             <Grid Margin="5">
@@ -44,8 +44,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
-            
+
+
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
@@ -63,7 +63,7 @@
                         Background="#FF222222" Width="180" Click="btnNewsClick">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="NewBox" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="News    " FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        <TextBlock Text="News      " FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnSettins" Height="55"

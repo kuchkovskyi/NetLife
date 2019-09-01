@@ -58,6 +58,13 @@ namespace NetLife
             this.Close();
         }
 
+        private void btnFAQClick(object sender, RoutedEventArgs e)
+        {
+            FAQ faq = new FAQ();
+            faq.Show();
+            this.Close();
+        }
+
         private void MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
