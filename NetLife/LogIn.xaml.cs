@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetLife.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,6 @@ namespace NetLife
     /// </summary>
     public partial class LogIn : Window
     {
-        bool check = false;
         public LogIn()
         {
             InitializeComponent();
@@ -27,25 +27,32 @@ namespace NetLife
 
         private void btnEntranceClick(object sender, RoutedEventArgs e)
         {
-            if (check == false)
-            {
-                CheckDataOfLogIn();
-            }
-            else
-            {
-                Main main = new Main();
-                main.Show();
-                this.Close();
-            }
-        }
 
-        public void CheckDataOfLogIn()
-        {
-            if(tbUserName.Text == "" || pbPassword.Password == "")
+            if (tbUserName.Text == "" || pbPassword.Password == "")
             {
                 MessageBox.Show("Please fill in the empty fields!");
             }
-            else { check = true; }
+            else
+            {
+                EFContext context = new EFContext();
+                List<User> users = context.Users.ToList();
+                foreach (var el in users)
+                {
+                    if (el.UserName == tbUserName.Text && el.Password == pbPassword.Password)
+                    {
+                        Main main = new Main();
+                        main.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter your data again!");
+                        tbUserName.Clear();
+                        pbPassword.Clear();
+                    }
+                }
+            }
+            
         }
 
         private void btnCreateAccountClick(object sender, RoutedEventArgs e)
