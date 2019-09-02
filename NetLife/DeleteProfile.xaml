@@ -1,0 +1,44 @@
+﻿<Window x:Class="NetLife.DeleteProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetLife"
+        mc:Ignorable="d"
+        Title="Delete Profile" Height="300" Width="500"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Background="Cyan" Foreground="#FF222222"
+                   FontSize="20" FontFamily="Copperplate Gothic Light"
+                   Text="Are you sure you want to delete the profile without the possibility of recovery?"
+                   TextWrapping="Wrap" TextAlignment="Center"/>
+
+        <Button x:Name="btnYes" Click="btnYesClick"
+                Grid.Column="0" Grid.Row="1"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Height="50" Width="100"
+                Background="Red" Foreground="White" BorderBrush="White"
+                FontSize="20" FontFamily="Copperplate Gothic Light"
+                Content="Yes"/>
+
+        <Button x:Name="btnNo" Click="btnNoClick"
+                Grid.Column="1" Grid.Row="1"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Height="50" Width="100"
+                Background="Cyan" Foreground="White" BorderBrush="White"
+                FontSize="20" FontFamily="Copperplate Gothic Light"
+                Content="No"/>
+    </Grid>
+</Window>

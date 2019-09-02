@@ -43,9 +43,95 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="Why I can`t add news?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="How do I delete news?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="How can I change my password?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="How can I change the username?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="How I can delete a profile?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="What should I do if I forget my password?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="Why I can't log in?" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Margin="10 7"
+                       Background="White" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       Text="Write your problem and we will send you a solution →" VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
 
+            <TextBlock Grid.Row="0" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="To add news fill in all fields. If the news isn't added try logging in to the system, restart the application or wait a few minutes to publish." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="To delete news select the content you need, open it and click on the ''Delete'' button, then confirm your choice." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="To change the password go to the ''Settings'' tab, click on the ''Change password'' button, enter the old password, new password and confirm it." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="To change the username go to the ''Settings'' tab, click on the ''Change username'' button and enter the new username." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="To delete the profile go to the ''Settings'' tab, click on the ''Delete profile'' button, and confirm it entering your password." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="So far our program is in additional development mode, so it is recommended to write down your password in notepad, notebook, phone etc." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBlock Grid.Row="6" Grid.Column="1" Margin="10 7"
+                       Background="Cyan" Foreground="#FF222222"
+                       FontFamily="Copperplate Gothic Light" FontSize="16"
+                       Text="Login impossible for several reasons. This mainly concerns incorrectly entered data. If the data were entered correctly, please restart the application." VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+            <TextBox Grid.Row="7" Grid.Column="1" Margin="10 7"
+                     Background="White" Foreground="#FF222222" BorderBrush="Aqua"
+                     FontFamily="Copperplate Gothic Light" FontSize="16"
+                     VerticalAlignment="Center"/>
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
@@ -71,7 +157,7 @@
                         Background="#FF222222" Width="180" Click="btnSettingsClick">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Options" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
+                        <TextBlock Text="Settings" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnFAQ" Height="55"

@@ -27,32 +27,35 @@ namespace NetLife
 
         private void btnEntranceClick(object sender, RoutedEventArgs e)
         {
-
-            if (tbUserName.Text == "" || pbPassword.Password == "")
+            try
             {
-                MessageBox.Show("Please fill in the empty fields!");
-            }
-            else
-            {
-                EFContext context = new EFContext();
-                List<User> users = context.Users.ToList();
-                foreach (var el in users)
+                if (tbUserName.Text == "" || pbPassword.Password == "")
                 {
-                    if (el.UserName == tbUserName.Text && el.Password == pbPassword.Password)
+                    MessageBox.Show("Please fill in the empty fields!");
+                }
+                else
+                {
+                    EFContext context = new EFContext();
+                    List<User> users = context.Users.ToList();
+                    foreach (var el in users)
                     {
-                        Main main = new Main();
-                        main.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Enter your data again!");
-                        tbUserName.Clear();
-                        pbPassword.Clear();
+                        if (el.UserName == tbUserName.Text && el.Password == pbPassword.Password)
+                        {
+                            Main main = new Main();
+                            main.Show();
+                            this.Close();
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Enter your data again!");
+                            tbUserName.Clear();
+                            pbPassword.Clear();
+                        }
                     }
                 }
             }
-            
+            catch (Exception) { }
         }
 
         private void btnCreateAccountClick(object sender, RoutedEventArgs e)

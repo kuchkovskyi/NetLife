@@ -69,5 +69,12 @@ namespace NetLife
         {
             DragMove();
         }
+
+        private void btnDeleteProfileClick(object sender, RoutedEventArgs e)
+        {
+            DeleteProfile deleteProfile = new DeleteProfile();
+            deleteProfile.Show();
+            this.Close();
+        }
     }
 }

@@ -61,6 +61,7 @@ namespace NetLife
                         Title = tbTitle.Text,
                         Description = tbDescription.Text
                     });
+                    context.SaveChanges();
                 }
 
                 MessageBox.Show("Your news created and added succesfull!");

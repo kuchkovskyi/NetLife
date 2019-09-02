@@ -44,8 +44,14 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+
             
             
+            <Button x:Name="btnDeleteProfile" Click="btnDeleteProfileClick"
+                    Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Background="Red" Foreground="White" BorderBrush="White"
+                    FontFamily="Copperplate Gothic Light" FontSize="20"
+                    Content="Delete Profile"/>
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">
@@ -71,7 +77,7 @@
                         Background="#FF222222" Width="180" Click="btnSettingsClick">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Settings" Height="30" Width="30" VerticalAlignment="Center" Margin="5"/>
-                        <TextBlock Text="Options" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
+                        <TextBlock Text="Settings" FontSize="16" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </Button>
                 <Button x:Name="btnFAQ" Height="55"

@@ -70,6 +70,9 @@
     <Compile Include="CreateNew.xaml.cs">
       <DependentUpon>CreateNew.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeleteProfile.xaml.cs">
+      <DependentUpon>DeleteProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\AdditionalUserInfo.cs" />
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\New.cs" />
@@ -98,6 +101,10 @@
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Page Include="CreateNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
