@@ -76,5 +76,15 @@ namespace NetLife
             deleteProfile.Show();
             this.Close();
         }
+
+        private void btnEditUserNameClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEditPasswordClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

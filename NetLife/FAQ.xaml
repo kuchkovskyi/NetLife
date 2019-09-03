@@ -89,7 +89,7 @@
                        TextWrapping="Wrap"/>
             <TextBlock Grid.Row="7" Grid.Column="0" Margin="10 7"
                        Background="White" Foreground="#FF222222"
-                       FontFamily="Copperplate Gothic Light" FontSize="18"
+                       FontFamily="Copperplate Gothic Light" FontSize="17"
                        Text="Write your problem and we will send you a solution →" VerticalAlignment="Center"
                        TextWrapping="Wrap"/>
 

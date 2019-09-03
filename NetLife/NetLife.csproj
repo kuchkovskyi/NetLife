@@ -76,6 +76,7 @@
     <Compile Include="Entities\AdditionalUserInfo.cs" />
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\New.cs" />
+    <Compile Include="Entities\NewHelper.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="FAQ.xaml.cs">
       <DependentUpon>FAQ.xaml</DependentUpon>
@@ -100,6 +101,7 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entities\UserHelper.cs" />
     <Page Include="CreateNew.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

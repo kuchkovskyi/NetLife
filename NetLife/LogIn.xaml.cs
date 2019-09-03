@@ -37,22 +37,26 @@ namespace NetLife
                 {
                     EFContext context = new EFContext();
                     List<User> users = context.Users.ToList();
+                    bool IsFinded = false;
                     foreach (var el in users)
                     {
                         if (el.UserName == tbUserName.Text && el.Password == pbPassword.Password)
                         {
+                            IsFinded = true;
+                            UserHelper.Id = el.Id;  
                             Main main = new Main();
                             main.Show();
                             this.Close();
                             break;
                         }
-                        else
-                        {
-                            MessageBox.Show("Enter your data again!");
-                            tbUserName.Clear();
-                            pbPassword.Clear();
-                        }
                     }
+                    if (!IsFinded)
+                    {
+                        MessageBox.Show("Enter your data again!");
+                        tbUserName.Clear();
+                        pbPassword.Clear();
+                    }
+                    
                 }
             }
             catch (Exception) { }

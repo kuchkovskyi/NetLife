@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetLife.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,20 @@ namespace NetLife
     /// </summary>
     public partial class Profile : Window
     {
+        EFContext context = new EFContext();
+        List<User> Users = new List<User>();
+
+        
+
         public Profile()
-        {
+        { 
             InitializeComponent();
+
+
+            int userId = UserHelper.Id;
+            context = Users;
         }
+
         private void btnProfileClick(object sender, RoutedEventArgs e)
         {
             Profile profile = new Profile();
