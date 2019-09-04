@@ -46,7 +46,8 @@
             </Grid.ColumnDefinitions>
             <DataGrid x:Name="dgNews" 
                       Grid.Row="0" Grid.ColumnSpan="2" Margin="20 20 20 10" 
-                      FontSize="20" FontFamily="Copperplate Gothic Light"/>
+                      FontSize="20" FontFamily="Copperplate Gothic Light"
+                      Background="Cyan" Foreground="#FF222222" IsReadOnly="True"/>
             <Button Grid.Row="1" Grid.Column="0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"
                     Content="Add New" FontFamily="Copperplate Gothic Light" FontSize="25"
                     Background="Aqua" Foreground="#FF222222" x:Name="btnAddNew" Click="btnAddNewClick"/>

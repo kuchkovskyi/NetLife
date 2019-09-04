@@ -75,8 +75,8 @@
     </Compile>
     <Compile Include="Entities\AdditionalUserInfo.cs" />
     <Compile Include="Entities\EFContext.cs" />
+    <Compile Include="Entities\Model.cs" />
     <Compile Include="Entities\New.cs" />
-    <Compile Include="Entities\NewHelper.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="FAQ.xaml.cs">
       <DependentUpon>FAQ.xaml</DependentUpon>

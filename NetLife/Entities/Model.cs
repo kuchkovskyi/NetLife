@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace NetLife.Entities
 {
-    static public class NewHelper
+    public class Model
     {
-        static public int Id { get; set; }
+        public string Title { get; set; }
+
+        public string Description { get; set; }
     }
 }

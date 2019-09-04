@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetLife.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,22 @@ namespace NetLife
     /// </summary>
     public partial class News : Window
     {
+        EFContext context = new EFContext();
+        List<Model> models = new List<Model>();
         public News()
         {
             InitializeComponent();
+
+            foreach (var el in context.News)
+            {
+                Model model = new Model()
+                {
+                    Title = el.Title,
+                    Description = el.Description
+                };
+                models.Add(model);
+            }
+            dgNews.ItemsSource = models;
         }
 
         private void btnProfileClick(object sender, RoutedEventArgs e)
@@ -51,9 +65,7 @@ namespace NetLife
 
         private void btnLogoutClick(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
             LogIn log = new LogIn();
-            main.Show();
             log.Show();
             this.Close();
         }

@@ -21,9 +21,6 @@ namespace NetLife
     public partial class Profile : Window
     {
         EFContext context = new EFContext();
-        List<User> Users = new List<User>();
-
-        
 
         public Profile()
         { 
@@ -31,7 +28,18 @@ namespace NetLife
 
 
             int userId = UserHelper.Id;
-            context = Users;
+            foreach(var el in context.Users)
+            {
+                if(el.Id == userId)
+                {
+                    tbkName.Text = el.Name;
+                    tbkSurname.Text = el.Surname;
+                    tbkAge.Text = el.Age;
+                    tbkGender.Text = el.Gender;
+                    tbkUserName.Text = el.UserName;
+                    tbkPassword.Text = el.Password;
+                }
+            }
         }
 
         private void btnProfileClick(object sender, RoutedEventArgs e)
@@ -61,9 +69,7 @@ namespace NetLife
 
         private void btnLogoutClick(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
             LogIn log = new LogIn();
-            main.Show();
             log.Show();
             this.Close();
         }

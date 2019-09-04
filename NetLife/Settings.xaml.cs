@@ -51,9 +51,7 @@ namespace NetLife
 
         private void btnLogoutClick(object sender, RoutedEventArgs e)
         {
-            MainWindow main = new MainWindow();
             LogIn log = new LogIn();
-            main.Show();
             log.Show();
             this.Close();
         }

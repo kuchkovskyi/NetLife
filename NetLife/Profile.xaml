@@ -96,13 +96,13 @@
                        x:Name="tbkUserName"/>
 
             <TextBlock Grid.Column="0" Grid.Row="5" Margin="10"
-                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Experience"
+                       Foreground="#FF222222" FontFamily="Copperplate Gothic Light" FontSize="25" Text="Password"
                        TextAlignment="Left"/>
 
             <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Margin="10 10 10 40"
                        Background="LightGray" Foreground="#FF222222"
                        FontFamily="Copperplate Gothic Light" FontSize="25"
-                       x:Name="tbkExperience"/>
+                       x:Name="tbkPassword"/>
         </Grid>
 
         <Grid Width="250" HorizontalAlignment="Left" Background="#FF222222">

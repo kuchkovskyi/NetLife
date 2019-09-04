@@ -34,7 +34,7 @@ namespace NetLife
             this.Close();
         }
 
-        public void CheckDataOfNew()
+        private void btnLoadClick(object sender, RoutedEventArgs e)
         {
             if(tbTitle.Text == "" || tbDescription.Text == "")
             {
@@ -42,24 +42,14 @@ namespace NetLife
             }
             else
             {
-                check = true;
-            }
-        }
-
-        private void btnLoadClick(object sender, RoutedEventArgs e)
-        {
-            if(check == false)
-            {
-                CheckDataOfNew();
-            }
-            else
-            {
                 using (EFContext context = new EFContext())
                 {
+                    int Id = UserHelper.Id;
                     context.News.Add(new New
                     {
                         Title = tbTitle.Text,
-                        Description = tbDescription.Text
+                        Description = tbDescription.Text,
+                        IdUser = Id
                     });
                     context.SaveChanges();
                 }
