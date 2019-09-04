@@ -13,7 +13,7 @@ namespace NetLife.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201909012103163_migr1"; }
+            get { return "201909042107294_migr1"; }
         }
         
         string IMigrationMetadata.Source

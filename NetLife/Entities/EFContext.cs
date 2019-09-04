@@ -17,7 +17,5 @@ namespace NetLife.Entities
         public DbSet<User> Users { get; set; }
 
         public DbSet<New> News { get; set; }
-
-        public DbSet<AdditionalUserInfo> AdditionalUserInfos { get; set; }
     }
 }

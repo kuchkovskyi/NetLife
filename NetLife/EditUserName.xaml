@@ -1,0 +1,82 @@
+﻿<Window x:Class="NetLife.EditUserName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetLife"
+        mc:Ignorable="d"
+        Title="Edit UserName" Height="300" Width="500"
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="300" MaxWidth="500" Background="Cyan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock Height="25" VerticalAlignment="Center" Foreground="Gray"
+                       Text="NetLife" Background="White" TextAlignment="Center"
+                       FontSize="20" FontFamily="Copperplate Gothic Light" Margin="15 0"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Background="White" Foreground="#FF222222"
+                   FontSize="18" FontFamily="Copperplate Gothic Light"
+                   Content="Your UserName"/>
+            <TextBox x:Name="tbUN" Grid.Column="1" Margin="10 18"
+                     Background="White" Foreground="#FF222222" BorderBrush="Cyan"
+                     FontSize="18" FontFamily="Copperplate Gothic Light"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Background="White" Foreground="#FF222222"
+                   FontSize="18" FontFamily="Copperplate Gothic Light"
+                   Content="New UserName"/>
+            <TextBox x:Name="tbNewUN"
+                     Grid.Column="1" Margin="10 18"
+                     Background="White" Foreground="#FF222222" BorderBrush="Cyan"
+                     FontSize="18" FontFamily="Copperplate Gothic Light"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnBack" Click="btnBackClick"
+                    Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Background="White" Foreground="#FF222222" BorderBrush="Gray"
+                    FontSize="18" FontFamily="Copperplate Gothic Light"
+                    Content="←"/>
+
+            <Button x:Name="btnEdit" Click="btnEditClick"
+                    Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Background="White" Foreground="#FF222222" BorderBrush="Gray"
+                    FontSize="18" FontFamily="Copperplate Gothic Light"
+                    Content="Edit"/>
+
+            <Button x:Name="btnClear" Click="btnClearClick"
+                    Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Background="White" Foreground="#FF222222" BorderBrush="Gray"
+                    FontSize="18" FontFamily="Copperplate Gothic Light"
+                    Content="Clear"/>
+        </Grid>
+    </Grid>
+</Window>

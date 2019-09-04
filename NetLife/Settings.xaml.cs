@@ -77,12 +77,16 @@ namespace NetLife
 
         private void btnEditUserNameClick(object sender, RoutedEventArgs e)
         {
-
+            EditUserName editUserName = new EditUserName();
+            editUserName.Show();
+            this.Close();
         }
 
         private void btnEditPasswordClick(object sender, RoutedEventArgs e)
         {
-
+            EditPassword editPassword = new EditPassword();
+            editPassword.Show();
+            this.Close();
         }
     }
 }

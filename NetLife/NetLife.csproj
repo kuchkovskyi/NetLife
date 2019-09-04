@@ -73,7 +73,12 @@
     <Compile Include="DeleteProfile.xaml.cs">
       <DependentUpon>DeleteProfile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entities\AdditionalUserInfo.cs" />
+    <Compile Include="EditPassword.xaml.cs">
+      <DependentUpon>EditPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserName.xaml.cs">
+      <DependentUpon>EditUserName.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entities\EFContext.cs" />
     <Compile Include="Entities\Model.cs" />
     <Compile Include="Entities\New.cs" />
@@ -84,9 +89,9 @@
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909012103163_migr1.cs" />
-    <Compile Include="Migrations\201909012103163_migr1.Designer.cs">
-      <DependentUpon>201909012103163_migr1.cs</DependentUpon>
+    <Compile Include="Migrations\201909042107294_migr1.cs" />
+    <Compile Include="Migrations\201909042107294_migr1.Designer.cs">
+      <DependentUpon>201909042107294_migr1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="News.xaml.cs">
@@ -107,6 +112,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DeleteProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditUserName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,8 +181,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201909012103163_migr1.resx">
-      <DependentUpon>201909012103163_migr1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909042107294_migr1.resx">
+      <DependentUpon>201909042107294_migr1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
