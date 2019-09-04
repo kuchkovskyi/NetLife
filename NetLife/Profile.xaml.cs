@@ -26,7 +26,6 @@ namespace NetLife
         { 
             InitializeComponent();
 
-
             int userId = UserHelper.Id;
             foreach(var el in context.Users)
             {

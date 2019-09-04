@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:NetLife"
         mc:Ignorable="d"
         Title="Delete Profile" Height="300" Width="500"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="300" MaxWidth="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

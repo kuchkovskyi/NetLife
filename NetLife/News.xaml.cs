@@ -79,7 +79,15 @@ namespace NetLife
 
         private void btnDeleteNewClick(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                foreach (var el in models)
+                {
+                    models.Remove(el);
+                    dgNews.Items.Remove(el.Description);
+                }
+            }
+            catch (Exception) { }
         }
 
         private void btnFAQClick(object sender, RoutedEventArgs e)

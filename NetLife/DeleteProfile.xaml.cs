@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetLife.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace NetLife
     /// </summary>
     public partial class DeleteProfile : Window
     {
+        EFContext context = new EFContext();
         public DeleteProfile()
         {
             InitializeComponent();
@@ -26,7 +28,17 @@ namespace NetLife
 
         private void btnYesClick(object sender, RoutedEventArgs e)
         {
-
+            int userId = UserHelper.Id;
+            foreach (var el in context.Users)
+            {
+                if (el.Id == userId)
+                {
+                    context.Users.Remove(el);
+                    LogIn logIn = new LogIn();
+                    logIn.Show();
+                    this.Close();
+                }
+            }
         }
 
         private void btnNoClick(object sender, RoutedEventArgs e)

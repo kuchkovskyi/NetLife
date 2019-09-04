@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:NetLife"
         mc:Ignorable="d"
         Title="CreateNew" Height="600" Width="1024"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="600" MaxWidth="1024">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.7*"/>

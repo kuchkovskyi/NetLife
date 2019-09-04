@@ -7,7 +7,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="FAQ" Height="600" Width="1024"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="600" MaxWidth="1024">
     <Grid>
         <StackPanel VerticalAlignment="Top" Background="White">
             <Grid Height="10" Background="Aqua"/>
