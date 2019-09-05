@@ -49,7 +49,7 @@ namespace NetLife
             }
             else
             {
-                foreach(var el in context.Users)
+                foreach(var el in context.Users.ToList())
                 {
                     if(tbUN.Text != el.UserName)
                     {
@@ -59,9 +59,14 @@ namespace NetLife
                     }
 
                     else if(el.Id == userId)
-                    { 
-                        el.UserName.Insert(userId, tbNewUN.Text);
+                    {
+                        context.Users.Find(userId).UserName = tbNewUN.Text;
                         context.SaveChanges();
+                        MessageBox.Show("Your username has been changed!");
+                        Settings settings = new Settings();
+                        settings.Show();
+                        this.Close();
+                        break;
                     }
                 }
             }

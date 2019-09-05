@@ -34,6 +34,7 @@ namespace NetLife
                 if (el.Id == userId)
                 {
                     context.Users.Remove(el);
+                    //context.SaveChanges();
                     LogIn logIn = new LogIn();
                     logIn.Show();
                     this.Close();

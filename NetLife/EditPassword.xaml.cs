@@ -49,7 +49,7 @@ namespace NetLife
             }
             else
             {
-                foreach (var el in context.Users)
+                foreach (var el in context.Users.ToList())
                 {
                     if (tbP.Text != el.Password)
                     {
@@ -60,8 +60,13 @@ namespace NetLife
 
                     else if (el.Id == userId)
                     {
-                        el.UserName.Insert(userId, tbNewP.Text);
+                        context.Users.Find(userId).Password = tbNewP.Text;
                         context.SaveChanges();
+                        MessageBox.Show("Your password has been changed!");
+                        Settings settings = new Settings();
+                        settings.Show();
+                        this.Close();
+                        break;
                     }
                 }
             }
